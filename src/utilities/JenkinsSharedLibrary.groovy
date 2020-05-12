@@ -30,6 +30,24 @@ class JenkinsSharedLibrary implements Serializable
       node_label = Is an array of node labels where the repository needs to be checkout
 
       */
+      
+      def preparation(){
+            steps.stage('Preparation') {
+    steps.node("kubernetes") {
+      steps.container("test-centos") {
+        
+       // git 'https://github.com/sukeshsangam/jenkins-gke-shared.git';
+        
+       steps.sh "echo hello"
+        //junit '**/target/surefire-reports/TEST-*.xml'
+        //archive 'target/*.jar'
+      }
+    }
+  }
+      
+      
+      
+      }
 
       def checkout(String git_url, String[] node_label)
       {

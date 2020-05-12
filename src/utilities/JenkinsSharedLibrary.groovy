@@ -43,6 +43,5 @@ class JenkinsSharedLibrary implements Serializable
         //archive 'target/*.jar'
       }
     }
-  }
-     
-      }
+  }     
+}

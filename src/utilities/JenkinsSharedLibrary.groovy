@@ -39,7 +39,7 @@ class JenkinsSharedLibrary implements Serializable
        // git 'https://github.com/sukeshsangam/jenkins-gke-shared.git';
         
        steps.echo "hello"
-            steps.echo '${steps.PWD}'
+            steps.echo '$PWD'
         //junit '**/target/surefire-reports/TEST-*.xml'
       
         steps.archive('**')

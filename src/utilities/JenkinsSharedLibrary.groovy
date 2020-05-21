@@ -40,9 +40,9 @@ class JenkinsSharedLibrary implements Serializable
         
        steps.echo "hello"
         //junit '**/target/surefire-reports/TEST-*.xml'
-      steps.publishers {
-        steps.archiveArtifacts('*')
-    }
+      
+        steps.archive('*')
+   
       }
     }
   }     

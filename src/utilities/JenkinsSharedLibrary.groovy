@@ -36,8 +36,8 @@ class JenkinsSharedLibrary implements Serializable
     steps.node("kubernetes") {
       steps.container("test-centos") {
         
-       // git 'https://github.com/sukeshsangam/jenkins-gke-shared.git';
-        steps.cat > test.txt
+       git 'https://github.com/sukeshsangam/jenkins-gke-shared.git';
+       // steps.cat > test.txt
        steps.echo "hello"
             steps.echo '$PWD'
         //junit '**/target/surefire-reports/TEST-*.xml'

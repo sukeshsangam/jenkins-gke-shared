@@ -14,6 +14,6 @@ podTemplate(label: 'kubernetes',
     containerTemplate(name: 'test-centos', image: 'centos:centos7', ttyEnabled: true, command: 'cat')
   ]) {
   instance.preparation()
-  kubectl get pods
+  kubectl config
 }
 }

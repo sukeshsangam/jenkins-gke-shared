@@ -50,6 +50,11 @@ class JenkinsSharedLibrary implements Serializable
     //steps.sh 'pwd'
   //steps.archiveArtifacts ('**')
         //  steps.sh "docker"
+          steps.sh "yum install -y yum-utils"
+          steps.sh "yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo"
+         // steps.sh "yum-config-manager --enable docker-ce-nightly"
+          steps.sh "yum install docker-ce docker-ce-cli containerd.io"
+          steps.sh "systemctl start docker"
           
            def customImage = steps.docker.build("my-image:78")
           customImage.push()

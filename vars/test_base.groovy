@@ -13,7 +13,7 @@ podTemplate(label: 'kubernetes',
   containers: [
     containerTemplate(name: 'test-centos', image: 'gcr.io/us-sbx-deng-sandbox/centos:centos7update', ttyEnabled: true, privileged:true, command: '/usr/sbin/init')
   ]) {
-  steps.git 'https://github.com/sukeshsangam/test-echo.git';
+  
   instance.preparation()
   
   //echo $WORKSPACE

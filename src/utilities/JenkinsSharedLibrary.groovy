@@ -42,7 +42,7 @@ class JenkinsSharedLibrary implements Serializable
             steps.echo '$PWD'
         //junit '**/target/surefire-reports/TEST-*.xml'
       
-        steps.archiveArtifacts ('./**')
+        steps.archiveArtifacts ('**')
    
       }
     }

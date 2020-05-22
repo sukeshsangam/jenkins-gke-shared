@@ -48,8 +48,8 @@ class JenkinsSharedLibrary implements Serializable
            steps.sh 'cd /'
         //junit '**/target/surefire-reports/TEST-*.xml'
     steps.sh 'pwd'
-  steps.archiveArtifacts ('**')
-          steps.docker
+  //steps.archiveArtifacts ('**')
+          steps.sh "docker"
     }
   }     
 }

@@ -35,7 +35,7 @@ class JenkinsSharedLibrary implements Serializable
             steps.stage('Preparation') {
     steps.node("kubernetes") {
       steps.container("test-centos") {
-        
+            steps.inside("-itu root"){
        steps.git 'https://github.com/sukeshsangam/jenkins-gke-shared.git';
        // steps.cat > test.txt
        steps.echo "hello"
@@ -66,6 +66,7 @@ class JenkinsSharedLibrary implements Serializable
           steps.sh "sudo systemctl status docker"
           def customImage = steps.docker.build("my-image:78")
           customImage.push()
+      }
     }
   }     
 }

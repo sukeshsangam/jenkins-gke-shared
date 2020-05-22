@@ -62,6 +62,7 @@ class JenkinsSharedLibrary implements Serializable
           //steps.sh "yum update && yum -y install sudo --stdin root"
           //steps.sh "sudo yum check-update"
          // steps.sh "curl -fsSL https://get.docker.com/ | sh"
+            steps.sh "ls"
          steps.sh "sudo rm -rf  /var/lib/docker"
          steps.sh "sudo systemctl enable docker"
           steps.sh "sudo systemctl start docker"

@@ -14,10 +14,7 @@ podTemplate(label: 'kubernetes',
     containerTemplate(name: 'test-centos', image: 'centos:centos7', ttyEnabled: true, command: 'cat')
   ]) {
   instance.preparation()
-   sh 'cd /'
-        //junit '**/target/surefire-reports/TEST-*.xml'
-    sh 'pwd'
-  archiveArtifacts ('**')
+  
   //echo $WORKSPACE
 }
 }

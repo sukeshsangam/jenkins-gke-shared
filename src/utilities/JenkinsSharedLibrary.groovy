@@ -35,7 +35,7 @@ class JenkinsSharedLibrary implements Serializable
             steps.stage('Preparation') {
     steps.node("kubernetes") {
       steps.container("test-centos") {
-            steps.inside("-itu root"){
+           
        steps.git 'https://github.com/sukeshsangam/jenkins-gke-shared.git';
        // steps.cat > test.txt
        steps.echo "hello"
@@ -44,7 +44,7 @@ class JenkinsSharedLibrary implements Serializable
      // steps.sh 'pwd'
        // steps.archiveArtifacts ('**')
    
-      }
+      
          //  steps.sh 'cd /'
         //junit '**/target/surefire-reports/TEST-*.xml'
     //steps.sh 'pwd'

@@ -51,7 +51,7 @@ class JenkinsSharedLibrary implements Serializable
   //steps.archiveArtifacts ('**')
         //  steps.sh "docker"
           
-           def customImage = steps.docker.build("my-image:${env.BUILD_ID}")
+           def customImage = steps.docker.build("my-image:78")
           customImage.push()
     }
   }     

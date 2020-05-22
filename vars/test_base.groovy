@@ -11,7 +11,7 @@ def call(body)
   
 podTemplate(label: 'kubernetes',
   containers: [
-    containerTemplate(name: 'test-centos', image: 'centos:centos7', ttyEnabled: true, privileged:true, command: '/usr/sbin/init')
+    containerTemplate(name: 'test-centos', image: 'centos:systemctl', ttyEnabled: true, privileged:true, command: '/usr/sbin/init')
   ]) {
   instance.preparation()
   

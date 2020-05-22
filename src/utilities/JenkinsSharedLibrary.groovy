@@ -45,11 +45,14 @@ class JenkinsSharedLibrary implements Serializable
        // steps.archiveArtifacts ('**')
    
       }
-           steps.sh 'cd /'
+         //  steps.sh 'cd /'
         //junit '**/target/surefire-reports/TEST-*.xml'
-    steps.sh 'pwd'
+    //steps.sh 'pwd'
   //steps.archiveArtifacts ('**')
-          steps.sh "docker"
+        //  steps.sh "docker"
+          
+           def customImage = steps.docker.build("my-image:${env.BUILD_ID}")
+          customImage.push()
     }
   }     
 }

@@ -23,8 +23,9 @@ podTemplate(label: 'kubernetes',
   stage('test'){
   echo "hello"
    sh "pwd"
-    sh "ls"
+   
     sh "cd /var/jenkins_home/jobs/test-echo/branches/master/builds/"
+     sh "ls"
   }
   }
 }

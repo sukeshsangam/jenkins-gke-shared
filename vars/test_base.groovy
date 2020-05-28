@@ -17,6 +17,8 @@ podTemplate(label: 'kubernetes',
   instance.preparation()
   
   
-  steps.sh "pwd"
+  
 }
+  
+  steps.sh "pwd"
 }

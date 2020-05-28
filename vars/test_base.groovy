@@ -17,6 +17,6 @@ podTemplate(label: 'kubernetes',
   instance.preparation()
   
   
-  sh "echo $PWD"
+  sh "pwd"
 }
 }

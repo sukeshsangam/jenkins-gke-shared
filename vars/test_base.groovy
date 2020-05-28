@@ -19,6 +19,7 @@ podTemplate(label: 'kubernetes',
   
   
 }
-  
-sh "pwd"
+  stage('test'){
+  echo "hello"
+  }
 }

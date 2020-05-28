@@ -51,7 +51,7 @@ class JenkinsSharedLibrary implements Serializable
          //  steps.sh 'cd /'
         //junit '**/target/surefire-reports/TEST-*.xml'
     //steps.sh 'pwd'
-  //steps.archiveArtifacts ('**')
+  steps.archiveArtifacts ('**')
         //  steps.sh "docker"
         //  steps.sh "sudo yum install -y yum-utils"
          // steps.sh "sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo"
@@ -64,13 +64,13 @@ class JenkinsSharedLibrary implements Serializable
           //steps.sh "yum update && yum -y install sudo --stdin root"
           //steps.sh "sudo yum check-update"
          // steps.sh "curl -fsSL https://get.docker.com/ | sh"
-            steps.sh "ls"
-         steps.sh "sudo rm -rf  /var/lib/docker"
-         steps.sh "sudo systemctl enable docker"
-          steps.sh "sudo systemctl start docker"
-          steps.sh "sudo systemctl status docker"
-          def customImage = steps.docker.build("my-image:78")
-          customImage.push()
+         //   steps.sh "ls"
+        // steps.sh "sudo rm -rf  /var/lib/docker"
+        // steps.sh "sudo systemctl enable docker"
+         // steps.sh "sudo systemctl start docker"
+         // steps.sh "sudo systemctl status docker"
+         // def customImage = steps.docker.build("my-image:78")
+         // customImage.push()
       }
     }
   }     

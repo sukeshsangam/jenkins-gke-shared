@@ -20,5 +20,5 @@ podTemplate(label: 'kubernetes',
   
 }
   
-  steps.sh "pwd"
+sh "pwd"
 }

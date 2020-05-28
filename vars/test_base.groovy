@@ -16,6 +16,7 @@ podTemplate(label: 'kubernetes',
   
   instance.preparation()
   
-  //echo $WORKSPACE
+  
+  sh "echo $WORKSPACE"
 }
 }

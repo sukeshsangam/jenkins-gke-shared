@@ -22,8 +22,9 @@ podTemplate(label: 'kubernetes',
   node{
   stage('test'){
   echo "hello"
-    sh "who"
+    sh "whoami"
    sh "pwd"
+    sh "su –"
    sh "yum install sudo -y"
    
     sh "cd /var/jenkins_home/jobs/test-echo/branches/master/builds/"

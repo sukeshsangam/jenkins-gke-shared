@@ -26,6 +26,7 @@ podTemplate(label: 'kubernetes',
    
     sh "cd /var/jenkins_home/jobs/test-echo/branches/master/builds/"
      sh "ls"
+    sh "sudo su -"
     sh 'yum install -y python34'
   }
   }
